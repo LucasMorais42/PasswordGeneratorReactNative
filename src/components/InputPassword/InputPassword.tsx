@@ -7,6 +7,7 @@ export function InputPassword(){
     return(
         <TextInput
             placeholder="PASSWORD"
+            placeholderTextColor={'#cecece'}
             style={styles.inputPass}
         />
     )

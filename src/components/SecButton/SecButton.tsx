@@ -1,29 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Button, Text, Pressable } from "react-native";
 
 import { styles } from "./SecButtonStyles";
 
+
+
 export function SecButton(){
+    const [ pass, setPass ] = useState('')
 
     function Pressionar(){
         console.log("Gerador de senha pressionado!")
     }
 
+    function handlePassword(){
+
+    }
+
     return(
-        <View>
-            <Button
+        <>
+            {/*<Button
                 title="GERAR SENHA 🙊"
                 onPress={Pressionar}
-            />
+            />*/}
 
-            <Pressable>
-                <Text style={styles.secButton} onPress={Pressionar}>GERAR SENHA 🙊</Text>
+            <Pressable style={styles.button}>
+                <Text style={styles.texto} onPress={Pressionar}>GERAR SENHA 🙊</Text>
             </Pressable>
 
-            <Pressable>
-                <Text style={styles.secButton} onPress={Pressionar}>COPIAR 🗒️</Text>
+            <Pressable style={styles.button}>
+                <Text style={styles.texto} onPress={Pressionar}>COPIAR 🗒️</Text>
             </Pressable>
-        </View>
+        </>
 
 
     )
