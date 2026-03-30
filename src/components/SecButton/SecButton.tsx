@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { View, Button, Text, Pressable } from "react-native";
 
 import { styles } from "./SecButtonStyles";
-
+import { InputPassword } from "../InputPassword/InputPassword";
+import { passwordService } from "../../services/PasswordService";
 
 
 export function SecButton(){
@@ -13,7 +14,8 @@ export function SecButton(){
     }
 
     function handlePassword(){
-
+        let token = passwordService()
+        setPass(token)
     }
 
     return(
@@ -23,8 +25,11 @@ export function SecButton(){
                 onPress={Pressionar}
             />*/}
 
+            <InputPassword pass={pass}/>
+            
+
             <Pressable style={styles.button}>
-                <Text style={styles.texto} onPress={Pressionar}>GERAR SENHA 🙊</Text>
+                <Text style={styles.texto} onPress={handlePassword}>GERAR SENHA 🙊</Text>
             </Pressable>
 
             <Pressable style={styles.button}>
