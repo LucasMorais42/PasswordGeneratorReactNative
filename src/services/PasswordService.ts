@@ -9,4 +9,4 @@ export function passwordService():string{
 
 
     return password;
-}a
+}as
