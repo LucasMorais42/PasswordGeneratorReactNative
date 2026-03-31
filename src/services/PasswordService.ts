@@ -6,7 +6,7 @@ export function passwordService():string{
         let index = Math.floor(Math.random()*caracteres.length)%caracteres.length
         password+=caracteres.charAt(index);
     }
-
+    
 
     return password;
-}as
+}
