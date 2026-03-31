@@ -9,11 +9,7 @@ interface InputLengthProps{
 
 export function InputLength({ length, setLength }: InputLengthProps){
 
-    const [text, setText] = useState('')
-
-    function getText(){
-        return text;
-    }
+    
 
     return(
         <TextInput
